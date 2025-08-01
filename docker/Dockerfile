@@ -27,6 +27,5 @@ ENV PATH="/root/.local/bin:$PATH"
 WORKDIR /app
 
 # install python packages
-COPY pyproject.toml uv.lock ./
 RUN uv sync --locked --no-cache
 
