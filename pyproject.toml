@@ -1,13 +1,11 @@
-[tool.poetry]
-name = "pdf-bookmark-project"
+[project]
+name = "app"
 version = "0.1.0"
-description = "PDF bookmark management project"
-package-mode = false
-
-[tool.poetry.dependencies]
-python = "^3.12"
-pdf-yaml-bookmark = {git = "https://github.com/yutayamamoto/pdf-yaml-bookmark.git"}
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+description = "python sandbox"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "marker-pdf>=1.8.2",
+    "pdf-yaml-bookmark>=0.0.4",
+    "ruff>=0.12.7",
+]
