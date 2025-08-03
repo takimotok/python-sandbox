@@ -1,8 +1,11 @@
 FROM ubuntu:24.04
 
+# cf.) https://docs.astral.sh/uv/guides/integration/docker/#using-uv-temporarily
 ENV UV_CACHE_DIR=/tmp \
     UV_NO_SYNC=1 \
     VIRTUAL_ENV="" \
+    # avoid using virtual env.'s python
+    UV_SYSTEM_PYTHON=1 \
     UV_PROJECT_ENVIRONMENT=/usr/local \
     PIP_BREAK_SYSTEM_PACKAGES=1
 
