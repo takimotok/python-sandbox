@@ -56,4 +56,3 @@ description: "Basic guidelines for development environment and design principles
 
 - Point out when thinking or approach is incorrect
 - Ask questions proactively when there are unclear points during work
-
