@@ -48,6 +48,12 @@ WORKDIR /app
 
 # install python packages globally (no venv)
 COPY pyproject.toml uv.lock ./
-RUN uv sync --locked --no-cache
+
+# It's likely to be best practice to install those below separately:
+#   - 1st command: external packages
+#   - 2nd command: activate my python project
+# 
+# This improves build efficiency for caching into Docker Layer respectively.
+RUN uv pip install --system -r pyproject.toml  
 RUN uv pip install --system -e .
 
