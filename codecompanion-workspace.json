@@ -1,0 +1,19 @@
+{
+  "name": "Python Sandbox Project",
+  "version": "1.0.0",
+  "system_prompt": "This is a Python development project focusing on clean, simple design principles with Docker containerization support.",
+  "groups": [
+    {
+      "name": "Development Guidelines",
+      "system_prompt": "Apply the development guidelines and design principles defined in the instructions. Always follow the communication requirements and coding standards specified.",
+      "data": ["dev-guidelines"]
+    }
+  ],
+  "data": {
+    "dev-guidelines": {
+      "type": "file",
+      "path": ".github/instructions/development-guidelines.instructions.md",
+      "description": "Core development environment setup, design principles, and communication guidelines for this project"
+    }
+  }
+}
